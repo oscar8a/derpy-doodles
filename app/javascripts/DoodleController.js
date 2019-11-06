@@ -41,7 +41,6 @@ class DoodleController {
             //this.doodleDisplayDIV = document.getElementsByClassName("item3");
             //this.doodleDisplayDIV.style = "visibility: visible"; // or "visible/hidden"
 
-
             // add to DOM
             this.doodleDIV.append(this.doodleControllerDIV);
         } // END CONSTRUCTOR
