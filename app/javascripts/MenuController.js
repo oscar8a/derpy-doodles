@@ -12,7 +12,6 @@ class MenuController{
 
         this.mainMenuButton.addEventListener("click", this.goToMainMenu.bind(this));
         this.newDoodleMenuButton.addEventListener("click", this.goToDrawDoodle.bind(this));
-
     }
 
     goToMainMenu(event){
@@ -34,10 +33,6 @@ class MenuController{
             this.userListDIV.style.display = "none";
             this.imageGallery.style.display = "block";
             this.doodleCreator.style.display = "block";
-        }
-            
+        }  
     }
-
-
-
 }
