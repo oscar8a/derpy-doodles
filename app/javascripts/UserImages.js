@@ -37,7 +37,7 @@ class UserImages {
             doodleImgDIV = document.createElement('div'),
             doodleIMG = document.createElement('img'),
             deleteBtn = document.createElement('button'),
-            shareBtn = document.createElement('button'),
+            // shareBtn = document.createElement('button'),
             doodleBtns = document.createElement('div'),
             theDoodleData = data.image;
 
@@ -51,11 +51,11 @@ class UserImages {
         deleteBtn.innerText = 'DELETE'
         deleteBtn.setAttribute('class', 'imgButtons')
 
-        shareBtn.innerText = 'SHARE'
-        shareBtn.setAttribute('class', 'imgButtons')
+        // shareBtn.innerText = 'SHARE'
+        // shareBtn.setAttribute('class', 'imgButtons')
 
         doodleBtns.appendChild(deleteBtn)
-        doodleBtns.appendChild(shareBtn)
+        // doodleBtns.appendChild(shareBtn)
 
         doodleImgDIV.appendChild(doodleIMG)
         doodleImgDIV.appendChild(doodleBtns)
@@ -64,17 +64,18 @@ class UserImages {
 
         doodleBtns.addEventListener('click', e => {
             console.log(e)
-            if (e.target.innerText === "SHARE") {
-                this.shareDoodle(e);
-            } else if (e.target.innerText === "DELETE") {
+            // if (e.target.innerText === "SHARE") {
+            //     this.shareDoodle(e);
+            // } else 
+            if (e.target.innerText === "DELETE") {
                 this.deleteDoodle(e);
             } else(console.log("Not Clicking a button"))
         });
     }
 
-    shareDoodle(e) {
-        console.log("IN shareDoodle()", e)
-    }
+    // shareDoodle(e) {
+    //     console.log("IN shareDoodle()", e)
+    // }
 
     deleteDoodle(e) {
         console.log("IN deleteDoodle()")
