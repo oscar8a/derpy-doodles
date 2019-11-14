@@ -24,6 +24,7 @@ class UserLogin {
             //document.getElementById("#login-form").reset();
         this.removeFormEventListener();
         let usernameValue = event.target.querySelector('input').value
+        document.getElementById('usernameinput').value='';
 
         fetch('http://localhost:3000/doodleusers', {
                 method: 'POST',
@@ -42,7 +43,7 @@ class UserLogin {
 
                 new UserImages(json.id);
 
-                document.querySelector(".menu-item2").setAttribute("data-isloggedin", "true");
+                // document.querySelector(".menu-item2").setAttribute("data-isloggedin", "true");
             })
             .catch(e => {
                 debugger

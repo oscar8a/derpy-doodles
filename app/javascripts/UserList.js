@@ -26,7 +26,7 @@ class UserList {
         this.userUl.addEventListener('click', (e) => {
             console.log(e)
             if (e.target.className === 'user-button') {
-                document.querySelector(".menu-item2").setAttribute("data-isloggedin", "true");
+                // document.querySelector(".menu-item2").setAttribute("data-isloggedin", "true");
                 this.callUserImages(e.target.parentNode.dataset.id);
             }
         });

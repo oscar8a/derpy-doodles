@@ -11,22 +11,25 @@ class MenuController{
         this.doodleCreator = document.querySelector(".item3");
 
         this.mainMenuButton.addEventListener("click", this.goToMainMenu.bind(this));
-        this.newDoodleMenuButton.addEventListener("click", this.goToDrawDoodle.bind(this));
+        // this.newDoodleMenuButton.addEventListener("click", this.goToDrawDoodle.bind(this));
     }
 
     goToMainMenu(event){
         event.preventDefault();
-        
         this.newUserSignupDIV.style.display = "block";
         this.userListDIV.style.display = "block";
         this.imageGallery.style.display = "none";
         this.doodleCreator.style.display = "none";
 
-        document.querySelector(".menu-item2").setAttribute("data-isloggedin", "false");
+        // document.querySelector(".menu-item2").setAttribute("data-isloggedin", "false");
+        // this.mainMenuButton.removeEventListener("click", this.goToMainMenu.bind(this));
+        new UserLogin();
     }
 
     goToDrawDoodle(event){
         event.preventDefault();
+
+        console.log(event.target.dataset)
 
         if(event.target.dataset.isloggedin==="true"){
             this.newUserSignupDIV.style.display = "none";
